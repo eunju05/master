@@ -1,0 +1,43 @@
+@import url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+
+*{
+    font-family: "Galmuri9";
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin : 0 auto;
+    position: relative;
+    height: 250px;
+    width: 500px;
+    padding : 20px;
+    border-radius: 5px;
+    border : 5px solid black;
+    flex-direction: column;
+}
+.image {
+    padding : 10px;
+    width: 200px;
+    height: 200px;
+}
+.check{
+    margin : 0 auto;
+    position: relative;
+    height: 50%;
+    width: 500px;
+    padding : 20px;
+}
+#level, .name{
+    font-weight : bold;
+}
+div>label{
+    color : red;
+}
+div>pre{
+    font-size: small;
+    text-align: right;
+}
+*{
+    text-align: left;
+}

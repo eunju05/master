@@ -1,4 +1,3 @@
-const expInput = document.querySelector("#info input.exp");
 const submitButton = document.querySelector("button");
 const progress= document.querySelector("progress");
 const showlevel= document.querySelector("#level");
@@ -6,44 +5,51 @@ const img = document.querySelector("img");
 var level;
 let cnt=0;
 
-function onSubmitBtnClick(){
-
-    var chk_obj = document.getElementsByName("checkbox");
+function fchk() { 
+    var chk_obj = document.getElementsByName("check");
     var chk_leng = chk_obj.length;
-    for (var i=0; i < chk_leng; i++) {
+    for (i=0; i < chk_leng; i++) {
         if (chk_obj[i].checked == true) { 
-            cnt+=Number(chk_obj[i].value);
+            cnt += (chk_obj[i].value)*1;
         }
     }
+}
+
+
+function onSubmitBtnClick(){
+    fchk();
     let exp = cnt;
+    console.log(exp);
     
     if (exp<=10) {
         level=1;
         progress.max=10;
     }
-    else if (exp>10 && exp<=20) {
+    else if (exp>10 && exp<=30) {
         level=2;
         exp-=10;
-        progress.max=10;
+        progress.max=20;
     }
     else {
         level=3;
-        exp-=20;
-        progress.max=20;
+        exp-=30;
+        progress.max=19;
     }
 
     if (level==1){
-        img.src="img/one.jpg";
+        img.src="img/level1.jpeg";
     }
     else if (level==2){
-        img.src="img/two.jpg";
+        img.src="img/level2.jpeg";
     }
     else{
-        img.src="img/three.jpg";
+        img.src="img/level3.jpeg";
     }
     progress.value=exp;
     showlevel.value=level;
     showlevel.innerText='Lv.'+level;
+
+    cnt=0;
     
 }
 
