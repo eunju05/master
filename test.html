@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>이미지</title>
+        <style>
+            .flex-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin : 0 auto;
+                position: relative;
+                height: 250px;
+                width: 500px;
+                padding : 20px;
+                border-radius: 5px;
+                border : 1px solid black;
+                background-color: #66ffcc;
+                flex-direction: column;
+            }
+            .image {
+                padding : 10px;
+                width: 200px;
+                height: 200px;
+            }
+            .check{
+                margin : 0 auto;
+                position: relative;
+                height: 50%;
+                width: 500px;
+                padding : 20px;
+                background-color: skyblue;
+            }
+            *{
+                text-align: left;
+            }
+        </style>
+
+        <script>
+
+        </script>
+    </head>
+
+    <body>
+        <div class="flex-container">
+            <div class="user"> 
+                <span class="name">학번 이름</span>
+                <span id="level">Lv.1</span>
+            </div>
+            <div class="image">
+                <img id="character" src="img/one.jpg" height="200px" width="200px">
+            </div>
+            <div class="exp">
+                <label for="level-gauge">EXP : </label> <progress id="styled" class="styled" max="10" value=""></progress>
+            </div>
+        </div>
+
+        <div class="check">
+            <input type="checkbox" name="check" value="5>개강 총회<br><br>
+            <input type="checkbox" name="check" value="5">종강 총회<br><br>
+            <input type="checkbox" name="check" value="1">신입생 환영회<br>
+
+            <p>스터디</p>
+
+            <span>
+            <ul>
+                <input type="checkbox" name="check" value="1">깃허브<br>
+                <input type="checkbox" name="check" value="1">C언어 기본 / C언어 고급<br>
+                <input type="checkbox" name="check" value="1">파이썬<br>
+                <input type="checkbox" name="check" value="1">웹프로그래밍<br>
+            </ul>
+            </span>
+            <br>
+            <input type="checkbox" name="check" value="1">게임 대회<br><br>
+            <input type="checkbox" name="check" value="1">인커톤<br><br>
+            <input type="checkbox" name="check" value="1">프로그래밍 전시회<br><br>
+            <input type="checkbox" name="check" value="1">안모각코<br>
+            <p>
+            엠티
+            <span>
+                <ul>
+                        <input type="checkbox" name="check" value="1">봄엠티<br>
+                        <input type="checkbox" name="check" value="1">기엠티<br>
+                        <input type="checkbox" name="check" value="1">틀엠티<br>
+                </ul>
+            </span>
+            </p>
+            <br>
+
+
+            <input type="checkbox" name="check" value="1">봄 나들이<br><br>
+            <input type="checkbox" name="check" value="1">방중모임<br><br>
+            <br>
+
+            <div id="info">
+                <button>Submit</button>
+            </div>
+
+        </div>
+    </body>
+    <script src="app.js"></script>
+</html>
